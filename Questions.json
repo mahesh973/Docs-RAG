@@ -1,0 +1,485 @@
+[
+    {
+        "question": "Debugging needed: `from sklearn.model_selection import train_test_split(X, y, test_size=0.2, random_state=42)` Is this import statement correct?"
+    },
+    {
+        "question": "Identify the mistake: `from sklearn.linear_model import LogisticRegression; model = LogisticRegression(C='1.0', random_state='42')`"
+    },
+    {
+        "question": "Is there an error in this model fitting code? `model.fit(X_train, Y_train)`"
+    },
+    {
+        "question": "Find the error: `from sklearn.ensemble import RandomForestClassifier; clf = RandomForestClassifier(n_estimator=100, max_depth=2, random_state=0); clf.fit(X, y)`"
+    },
+    {
+        "question": "What's wrong with this StandardScaler usage? `from sklearn.preprocessing import StandardScaler; scaler = StandardScaler(); scaler.fit_transform()`"
+    },
+    {
+        "question": "Correct the mistake: `from sklearn.impute import SimpleImputer; imputer = SimpleImputer(missing_values='NaN', strategy='mean'); imputer.fit_transform(X)`"
+    },
+    {
+        "question": "Is the OneHotEncoder used correctly? `from sklearn.preprocessing import OneHotEncoder; encoder = OneHotEncoder(); encoder.fit_transform(X)`"
+    },
+    {
+        "question": "Find and correct the error in this pipeline: `from sklearn.pipeline import Pipeline; from sklearn.preprocess import StandardScaler; from sklearn.svm import SVC; pipeline = Pipeline([('Scaler', StandardScaler()), ('svm', SVC())])`"
+    },
+    {
+        "question": "Debug this cross-validation code: `from sklearn.model_selection import cross_val_score; scores = cross_val_score(clf, X, y, cv='5')`"
+    },
+    {
+        "question": "Is the iris dataset loaded correctly here? `from sklearn.dataset import load_iris; iris = load_iris(); X, y = iris.data, iris.target`"
+    },
+    {
+        "question": "What's incorrect in this PCA usage? `from sklearn.decomposition import PCA; pca = PCA(n_components='2'); X_pca = pca.fit_transform(X)`"
+    },
+    {
+        "question": "Identify the error in this KMeans clustering code: `from sklearn.cluster import KMeans; kmeans = KMeans(n_cluster=3, random_state=0); kmeans.fit(X)`"
+    },
+    {
+        "question": "Correct the mistake in this accuracy computation: `from sklearn.metrics import accuracy_score; accuracy = accuracy_score(y_true, y_predict)`"
+    },
+    {
+        "question": "Find the error: `from sklearn.feature_selection import SelectFromModel; sfm = SelectFromModel(estimator=LogisticRegression, threshold='median').fit(X, y)`"
+    },
+    {
+        "question": "What is wrong with this Ridge regression code? `from sklearn.linear_model import Ridge; ridge = Ridge(alpha='1.0').fit(X, Y)`"
+    },
+    {
+        "question": "Debug the grid search syntax: `from sklearn.model_selection import GridSearchCV; param_grid = {'C': [0.1, 1, 10], 'gamma': ['0.001', '0.01', '0.1']}; grid_search = GridSearchCV(SVC(), param_grid, cv='5'); grid_search.fit(X_train, Y_train)`"
+    },
+    {
+        "question": "Is the confusion matrix imported correctly? `from sklearn.metrics import confusion_matrix; cm = confusion_matrix(y_true, y_pred)`"
+    },
+    {
+        "question": "What's wrong with this feature scaling code? `from sklearn.preprocessing import MinMaxScaler; scale = MinMaxScaler(feature_range=(0, 1)); X_scaled = scale.fit_transform(X)`"
+    },
+    {
+        "question": "Identify the mistake in this KNN classifier code: `from sklearn.neighbor import KNeighborsClassifier; knn = KNeighborsClassifier(n_neighbor=5); knn.fit(X_train, Y_train)`"
+    },
+    {
+        "question": "Correct this model saving code: `import joblib; joblib.dump(model, \u2018model.joblib')`"
+    },
+    {
+        "question": "Is this syntax correct for splitting a dataset? `from sklearn.model_selection import train_test_split`"
+    },
+    {
+        "question": "Check the syntax: `from sklearn.linear_model import LogisticRegression; model = LogisticRegression(C=1.0, random_state=42)`"
+    },
+    {
+        "question": "Is the following code snippet correct for fitting a model? `model.fit(X_train, y_train)`"
+    },
+    {
+        "question": "Evaluate the syntax: `from sklearn.ensemble import RandomForestClassifier; clf = RandomForestClassifier(n_estimators=100, max_depth=2, random_state=0); clf.fit(X, y)`"
+    },
+    {
+        "question": "Is this the correct way to import and use the StandardScaler? `from sklearn.preprocessing import StandardScaler; scaler = StandardScaler(); scaler.fit_transform(X)`"
+    },
+    {
+        "question": "Syntax check needed: `from sklearn.impute import SimpleImputer; imputer = SimpleImputer(missing_values=np.nan, strategy='mean'); imputer.fit_transform(X)`"
+    },
+    {
+        "question": "Is the syntax correct for encoding categorical variables? `from sklearn.preprocessing import OneHotEncoder; encoder = OneHotEncoder(); encoder.fit_transform(X).toarray()`"
+    },
+    {
+        "question": "Correct the syntax, if needed: `from sklearn.pipeline import Pipeline; from sklearn.preprocessing import StandardScaler; from sklearn.svm import SVC; pipeline = Pipeline([('scaler', StandardScaler()), ('svm', SVC())])`"
+    },
+    {
+        "question": "Syntax verification: `from sklearn.model_selection import cross_val_score; scores = cross_val_score(clf, X, y, cv=5)`"
+    },
+    {
+        "question": "Is this the right way to load the iris dataset? `from sklearn.datasets import load_iris; iris = load_iris(); X, y = iris.data, iris.target`"
+    },
+    {
+        "question": "Check if this syntax is correct for PCA: `from sklearn.decomposition import PCA; pca = PCA(n_components=2); X_pca = pca.fit_transform(X)`"
+    },
+    {
+        "question": "Verify the syntax: `from sklearn.cluster import KMeans; kmeans = KMeans(n_clusters=3, random_state=0); kmeans.fit(X)`"
+    },
+    {
+        "question": "Is this syntax correct for computing accuracy? `from sklearn.metrics import accuracy_score; accuracy = accuracy_score(y_true, y_pred)`"
+    },
+    {
+        "question": "Syntax check: `from sklearn.feature_selection import SelectFromModel; sfm = SelectFromModel(estimator=LogisticRegression()).fit(X, y)`"
+    },
+    {
+        "question": "Evaluate this code snippet for syntax errors: `from sklearn.linear_model import Ridge; ridge = Ridge(alpha=1.0).fit(X, y)`"
+    },
+    {
+        "question": "Check the correctness of this syntax for a grid search: `from sklearn.model_selection import GridSearchCV; param_grid = {'C': [0.1, 1, 10], 'gamma': [0.001, 0.01, 0.1]}; grid_search = GridSearchCV(SVC(), param_grid, cv=5); grid_search.fit(X_train, y_train)`"
+    },
+    {
+        "question": "Is this the correct import statement for the confusion matrix? `from sklearn.metrics import confusion_matrix`"
+    },
+    {
+        "question": "Syntax verification needed for feature scaling: `from sklearn.preprocessing import MinMaxScaler; scaler = MinMaxScaler(feature_range=(0, 1)); X_scaled = scaler.fit_transform(X)`"
+    },
+    {
+        "question": "Check this for correct syntax: `from sklearn.neighbors import KNeighborsClassifier; knn = KNeighborsClassifier(n_neighbors=5); knn.fit(X_train, y_train)`"
+    },
+    {
+        "question": "Is this the right syntax for saving a model using joblib? `from joblib import dump; dump(model, 'model.joblib')`"
+    },
+    {
+        "question": "How do you install scikit-learn in your Python environment?"
+    },
+    {
+        "question": "What is the purpose of the train_test_split function in scikit-learn?"
+    },
+    {
+        "question": "Can you explain the difference between supervised and unsupervised learning in scikit-learn?"
+    },
+    {
+        "question": "How do you perform grid search to optimize model parameters in scikit-learn?"
+    },
+    {
+        "question": "What is the role of fit() and predict() methods in scikit-learn models?"
+    },
+    {
+        "question": "How can you save and load scikit-learn models for future use?"
+    },
+    {
+        "question": "What metrics are available in scikit-learn for evaluating regression models?"
+    },
+    {
+        "question": "How do you handle missing data with scikit-learn?"
+    },
+    {
+        "question": "Can you list some of the classification algorithms available in scikit-learn?"
+    },
+    {
+        "question": "How do you scale features in a dataset using scikit-learn?"
+    },
+    {
+        "question": "What is the purpose of the Pipeline class in scikit-learn?"
+    },
+    {
+        "question": "How can you perform cross-validation in scikit-learn?"
+    },
+    {
+        "question": "What function would you use in scikit-learn to encode categorical variables?"
+    },
+    {
+        "question": "How does scikit-learn support text data processing?"
+    },
+    {
+        "question": "Can you explain the concept of 'fit_transform' in scikit-learn?"
+    },
+    {
+        "question": "What is the use of the 'random_state' parameter in many of the scikit-learn methods?"
+    },
+    {
+        "question": "How do you interpret feature importance in scikit-learn models?"
+    },
+    {
+        "question": "What are the steps to follow for data preprocessing in scikit-learn?"
+    },
+    {
+        "question": "How can you handle imbalanced datasets in scikit-learn?"
+    },
+    {
+        "question": "What is the difference between 'label encoding' and 'one hot encoding' in scikit-learn?"
+    },
+    {
+        "question": "How do you evaluate a clustering model in scikit-learn?"
+    },
+    {
+        "question": "Can you explain how Principal Component Analysis (PCA) is implemented in scikit-learn?"
+    },
+    {
+        "question": "What are hyperparameters in the context of scikit-learn models?"
+    },
+    {
+        "question": "How would you use feature selection techniques in scikit-learn?"
+    },
+    {
+        "question": "What is the significance of the 'n_estimators' parameter in ensemble methods of scikit-learn?"
+    },
+    {
+        "question": "How can you improve model performance using scikit-learn's ensemble techniques?"
+    },
+    {
+        "question": "What is the default loss function used in scikit-learn's LinearRegression model?"
+    },
+    {
+        "question": "How do you implement a custom scorer function in scikit-learn?"
+    },
+    {
+        "question": "What are the differences between the 'fit' and 'fit_transform' methods in scikit-learn's transformers?"
+    },
+    {
+        "question": "How does the 'max_depth' parameter affect a decision tree in scikit-learn?"
+    },
+    {
+        "question": "Can you describe how to use the ROC curve and AUC score for evaluating classifiers in scikit-learn?"
+    },
+    {
+        "question": "What is the method to compute silhouette score for evaluating the quality of clusters formed by the algorithm?"
+    },
+    {
+        "question": "How do you adjust the regularization strength in linear models of scikit-learn?"
+    },
+    {
+        "question": "What are the benefits of using scikit-learn's RandomizedSearchCV over GridSearchCV?"
+    },
+    {
+        "question": "How does the 'min_samples_split' parameter influence the training of a decision tree in scikit-learn?"
+    },
+    {
+        "question": "What is the significance of the 'kernel' parameter in Support Vector Machines in scikit-learn?"
+    },
+    {
+        "question": "How do you interpret the confusion matrix in scikit-learn?"
+    },
+    {
+        "question": "What are the steps for performing a polynomial regression using scikit-learn?"
+    },
+    {
+        "question": "How can you compare the performance of different models using scikit-learn?"
+    },
+    {
+        "question": "What is the use of the 'coef_' attribute in linear models of scikit-learn?"
+    },
+    {
+        "question": "How do you use scikit-learn for multi-class classification?"
+    },
+    {
+        "question": "What is the purpose of the 'StandardScaler' class in scikit-learn?"
+    },
+    {
+        "question": "Can you explain the impact of the 'learning_rate' parameter in gradient boosting models in scikit-learn?"
+    },
+    {
+        "question": "How do you use feature unions in scikit-learn to combine multiple preprocessing steps?"
+    },
+    {
+        "question": "What is the role of the 'n_jobs' parameter in scikit-learn estimators?"
+    },
+    {
+        "question": "How can you use scikit-learn to handle multi-output regression problems?"
+    },
+    {
+        "question": "What strategies does scikit-learn offer for dealing with overfitting in machine learning models?"
+    },
+    {
+        "question": "How do you visualize the decision tree in scikit-learn?"
+    },
+    {
+        "question": "What is the purpose of the 'validation_fraction' parameter in scikit-learn's iterative models like gradient boosting?"
+    },
+    {
+        "question": "How can you apply a transformation only to specific columns in a DataFrame using scikit-learn?"
+    },
+    {
+        "question": "What is the role of the 'class_weight' parameter in scikit-learn's classifiers?"
+    },
+    {
+        "question": "How do you use the 'SelectFromModel' class in scikit-learn for feature selection?"
+    },
+    {
+        "question": "Can you explain the concept of 'bagging' in scikit-learn and how it helps improve model stability?"
+    },
+    {
+        "question": "What are the advantages of using scikit-learn's 'ColumnTransformer' for data preprocessing?"
+    },
+    {
+        "question": "How do you interpret the results from a logistic regression model in scikit-learn?"
+    },
+    {
+        "question": "What methods does scikit-learn provide for dimensionality reduction besides PCA?"
+    },
+    {
+        "question": "How can the 'make_classification' and 'make_regression' functions be used to generate synthetic datasets in scikit-learn?"
+    },
+    {
+        "question": "What are the acceptable strings for the 'kernel' parameter in sklearn.svm.SVC?"
+    },
+    {
+        "question": "List all possible values for the 'strategy' parameter in sklearn.impute.SimpleImputer."
+    },
+    {
+        "question": "What values can the 'criterion' parameter take in sklearn.tree.DecisionTreeClassifier?"
+    },
+    {
+        "question": "Which solvers are supported by the 'solver' parameter in sklearn.linear_model.LogisticRegression?"
+    },
+    {
+        "question": "What are the valid options for the 'linkage' parameter in sklearn.cluster.AgglomerativeClustering?"
+    },
+    {
+        "question": "Identify all acceptable values for the 'splitter' parameter in sklearn.tree.DecisionTreeClassifier."
+    },
+    {
+        "question": "What are the permissible values for the 'affinity' parameter in sklearn.cluster.AgglomerativeClustering?"
+    },
+    {
+        "question": "List the acceptable inputs for the 'weights' parameter in sklearn.neighbors.KNeighborsClassifier."
+    },
+    {
+        "question": "What options are available for the 'algorithm' parameter in sklearn.neighbors.KNeighborsClassifier?"
+    },
+    {
+        "question": "Which values can the 'loss' parameter in sklearn.svm.SVC take when 'kernel' is set to 'precomputed'?"
+    },
+    {
+        "question": "Enumerate the possible values for the 'multi_class' parameter in sklearn.linear_model.LogisticRegression."
+    },
+    {
+        "question": "What are the valid choices for the 'shrinking' parameter in sklearn.svm.SVC?"
+    },
+    {
+        "question": "Identify all accepted values for the 'selection' parameter in sklearn.linear_model.ElasticNet."
+    },
+    {
+        "question": "What values are allowed for the 'penalty' parameter in sklearn.linear_model.LogisticRegression with the solver 'saga'?"
+    },
+    {
+        "question": "List the permissible values for the 'n_jobs' parameter in sklearn.model_selection.GridSearchCV."
+    },
+    {
+        "question": "Which values can the 'metric' parameter in sklearn.cluster.KMeans assume?"
+    },
+    {
+        "question": "Enumerate the possible options for the 'init' parameter in sklearn.cluster.KMeans."
+    },
+    {
+        "question": "What are the valid settings for the 'learning_rate' parameter in sklearn.ensemble.GradientBoostingClassifier?"
+    },
+    {
+        "question": "Identify all acceptable values for the 'voting' parameter in sklearn.ensemble.VotingClassifier."
+    },
+    {
+        "question": "What options are available for the 'eigen_solver' parameter in sklearn.manifold.SpectralEmbedding?"
+    },
+    {
+        "question": "List the acceptable values for the 'algorithm' parameter in sklearn.cluster.DBSCAN."
+    },
+    {
+        "question": "Which solvers are supported by the 'method' parameter in sklearn.linear_model.LassoLarsIC?"
+    },
+    {
+        "question": "What are the permissible inputs for the 'norm' parameter in sklearn.preprocessing.Normalizer?"
+    },
+    {
+        "question": "Enumerate all accepted values for the 'store_covariance' parameter in sklearn.discriminant_analysis.LinearDiscriminantAnalysis."
+    },
+    {
+        "question": "Which values can the 'degree' parameter in sklearn.preprocessing.PolynomialFeatures take?"
+    },
+    {
+        "question": "Identify the valid choices for the 'copy_X' parameter in sklearn.linear_model.LinearRegression."
+    },
+    {
+        "question": "What are the allowed values for the 'fit_prior' parameter in sklearn.naive_bayes.MultinomialNB?"
+    },
+    {
+        "question": "List the acceptable options for the 'warm_start' parameter in sklearn.ensemble.RandomForestClassifier."
+    },
+    {
+        "question": "What values are permissible for the 'p' parameter in sklearn.neighbors.KNeighborsClassifier?"
+    },
+    {
+        "question": "Enumerate possible values for the 'max_features' parameter in sklearn.ensemble.RandomForestClassifier."
+    },
+    {
+        "question": "What are the valid settings for the 'bootstrap' parameter in sklearn.ensemble.RandomForestClassifier?"
+    },
+    {
+        "question": "I'm splitting my data into a train set and a test set. Which function from scikit-learn should I use?"
+    },
+    {
+        "question": "How do I standardize my features to have zero mean and unit variance using scikit-learn?"
+    },
+    {
+        "question": "Can you suggest a scikit-learn tool for detecting outliers in my dataset?"
+    },
+    {
+        "question": "I need to optimize my model's hyperparameters. What's the best scikit-learn class for conducting a grid search?"
+    },
+    {
+        "question": "What's the scikit-learn way of turning categorical variables into a one-hot numeric array?"
+    },
+    {
+        "question": "Which method should I use in scikit-learn to reduce the dimensions of my dataset without losing too much information?"
+    },
+    {
+        "question": "I want to check how accurate my classifier is. Which scikit-learn function gives me the accuracy metric?"
+    },
+    {
+        "question": "What do I use in scikit-learn to chain together multiple transformation steps and end with an estimator?"
+    },
+    {
+        "question": "Is there a way in scikit-learn to create a custom feature selector as part of my pipeline?"
+    },
+    {
+        "question": "How can I evaluate multiple models at once using cross-validation in scikit-learn?"
+    },
+    {
+        "question": "For clustering a big dataset, which scikit-learn algorithm would you recommend for efficiency?"
+    },
+    {
+        "question": "I have some missing values in my dataset. Which scikit-learn function should I use to fill them in using the mean?"
+    },
+    {
+        "question": "What scikit-learn tool allows for applying a non-linear transformation to features for engineering purposes?"
+    },
+    {
+        "question": "Which transformer in scikit-learn should I use for turning ordinal categorical features into integers?"
+    },
+    {
+        "question": "If I want to predict a continuous value using a tree model, which scikit-learn estimator is up for the job?"
+    },
+    {
+        "question": "I'm considering logistic regression with a penalty. Which scikit-learn class is designed for this?"
+    },
+    {
+        "question": "What's the right scikit-learn function for creating synthetic datasets tailored for classification?"
+    },
+    {
+        "question": "How can I show the decision boundaries for different classifiers using scikit-learn?"
+    },
+    {
+        "question": "Before training my model, I want to remove features that don't vary much. Which scikit-learn tool does this?"
+    },
+    {
+        "question": "Which scikit-learn estimator should I pick for implementing a neural network classifier?"
+    },
+    {
+        "question": "I'm looking to train a model that automatically adjusts to imbalanced classes. Any scikit-learn suggestions?"
+    },
+    {
+        "question": "What's the easiest way in scikit-learn to compare the performance of different algorithms with default settings?"
+    },
+    {
+        "question": "Can you tell me how to use scikit-learn for a regression problem where I have to predict house prices?"
+    },
+    {
+        "question": "I'm new to machine learning. Which scikit-learn function can help me find the most important features in my dataset?"
+    },
+    {
+        "question": "Is there a scikit-learn algorithm that can help me group my customers into different segments?"
+    },
+    {
+        "question": "I need to preprocess text data for a NLP project. What tools does scikit-learn offer for this?"
+    },
+    {
+        "question": "What scikit-learn class would be best for developing a recommender system?"
+    },
+    {
+        "question": "How do I deal with categorical but non-ordinal data in my model using scikit-learn?"
+    },
+    {
+        "question": "Could you suggest a scikit-learn function that helps in visualizing high-dimensional data in 2D or 3D?"
+    },
+    {
+        "question": "What's the best scikit-learn strategy for handling missing categorical data before running a classifier?"
+    },
+    {
+        "question": "How can I use scikit-learn to automatically select the best preprocessing steps for my data?"
+    },
+    {
+        "question": "I've got a time series forecasting problem. Does scikit-learn have tools to handle this type of data?"
+    },
+    {
+        "question": "What's the recommended approach in scikit-learn for scaling features when I have outliers in my data?"
+    }
+]

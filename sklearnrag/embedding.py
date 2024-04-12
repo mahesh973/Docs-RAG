@@ -3,6 +3,32 @@ import torch
 from langchain_openai import OpenAIEmbeddings
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from tqdm import tqdm
+from pathlib import Path
+from sklearnrag.config import WORK_DIR
+import json
+
+
+def load_or_create_embeddings(model_name, chunks):
+    embeddings_file_name = f"{model_name.split('/')[-1]}-embedded-chunks.json"
+
+    embeddings_file_path = Path(WORK_DIR, "saved_embeddings")
+    embeddings_file_path.mkdir(parents=True, exist_ok=True)
+    embeddings_file_path = Path(embeddings_file_path, embeddings_file_name)
+    
+    # Check if embeddings file exists
+    if embeddings_file_path.exists():
+        with open(embeddings_file_path, 'r') as file:
+            embeddings = json.load(file)
+    else:
+        # Initialize the embedding model
+        embedder = EmbedChunks(model_name=model_name)
+        embeddings = embedder.process_chunks(chunks)
+        
+        # Save the embeddings to a file
+        with open(embeddings_file_path, 'w') as file:
+            json.dump(embeddings, file, indent=4)
+    
+    return embeddings
 
 
 def get_embedding_model(embedding_model_name, model_kwargs, encode_kwargs):
@@ -44,15 +70,3 @@ class EmbedChunks:
             embedded_batch = self(batch) 
             embedded_chunks.extend(embedded_batch)
         return embedded_chunks
-    
-
-# embedding_model_name = "thenlper/gte-base"
-# embedder = EmbedChunks(model_name=embedding_model_name)
-
-# # Processing chunks in batches
-# batch_size = 100
-# embedded_chunks = []
-# for i in tqdm(range(0, len(chunks), batch_size)):
-#     batch = chunks[i:i+batch_size]
-#     embedded_batch = embedder(batch)
-#     embedded_chunks.extend(embedded_batch)

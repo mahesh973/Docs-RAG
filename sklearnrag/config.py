@@ -15,6 +15,7 @@ MAX_CONTEXT_LENGTHS = {
     "gpt-4": 8192,
     "gpt-3.5-turbo": 4096,
     "gpt-4-1106-preview": 128000,
+    "gpt-4-turbo-2024-04-09": 128000,
     "meta-llama/Llama-2-13b-chat-hf": 4096,
     "meta-llama/Llama-2-70b-chat-hf": 4096,
     "mistralai/Mistral-7B-Instruct-v0.1": 8192,

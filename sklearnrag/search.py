@@ -56,7 +56,6 @@ def load_index(embedding_model_name, embedding_dim, chunk_size, chunk_overlap, d
 
 
 def semantic_search(query, index, embedding_model, k = 5):
-
     embedding = np.array(embedding_model.embed_query(query))
 
     result = index.query(

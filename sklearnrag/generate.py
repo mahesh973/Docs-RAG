@@ -107,6 +107,7 @@ class QueryAgent:
         self.index = index
 
         # LLM
+        max_context_length = 4096 if llm == "gpt-4-turbo-2024-04-09" else max_context_length
         self.llm = llm
         self.temperature = temperature
         self.context_length = int(

@@ -96,18 +96,3 @@ def fetch_text(uri):
     else:
         text = soup.get_text()
     return text
-
-
-
-# #Example usage:
-# sample_html_fp = Path(WORK_DIR, "scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html")
-
-# result = extract_sections({"path": sample_html_fp})
-# print(result)
-
-
-# for i, element in enumerate(result):
-#     print(str(i), element['source'])
-#     print("-------------------------------------------------")
-#     print(element['text'][:10000])
-#     print("-------------------------------------------------")

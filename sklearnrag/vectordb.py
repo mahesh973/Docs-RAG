@@ -66,20 +66,6 @@ class PineconeIndex(Pinecone):
 
 
 
-# pc = PineconeIndex()
-
-# index = pc.get_index("text-3-large-sklearn-docs-embed")
-
-# print(index.describe_index_stats())
-
-# index = pc.create_index("text-3-large-skln-docs-embed", 768)
-
-# pc.delete_index("text-3-large-skln-docs-embed")
-
-
-
-
-
 
 
 

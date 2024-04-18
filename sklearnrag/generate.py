@@ -7,12 +7,16 @@ import torch
 
 from IPython.display import JSON, clear_output, display
 from tqdm import tqdm
+from pinecone import Pinecone
+import os
 
 from sklearnrag.config import WORK_DIR
 from sklearnrag.embedding import get_embedding_model
 from sklearnrag.search import load_index, semantic_search
 from sklearnrag.utils import get_client, get_num_tokens, trim
 
+
+pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
 
 def response_stream(chat_completion):
     for chunk in chat_completion:
@@ -89,7 +93,7 @@ class QueryAgent:
     def __init__(
         self,
         embedding_model_name="thenlper/gte-large",
-        index=None,
+        index=pc.Index("gte-large-750"),
         llm="mistralai/Mixtral-8x7B-Instruct-v0.1",
         temperature=0.0,
         max_context_length=32768,

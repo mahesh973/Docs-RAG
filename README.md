@@ -13,7 +13,7 @@ This project is all about building an RAG-based LLM application where we will in
 
 
 
-### Checkout the app deployed on HuggingFace Spaces : (https://huggingface.co/spaces/Mahesh9/sklearn-rag)
+### Checkout the app deployed on HuggingFace Spaces : https://huggingface.co/spaces/Mahesh9/sklearn-rag
 
 
 &nbsp;

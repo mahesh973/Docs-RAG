@@ -12,6 +12,10 @@ This project is all about building an RAG-based LLM application where we will in
 - The goal here is to make it easier for developers to adopt the latest and most efficient ways to leverage the Scikit-learn framework.
 
 
+
+### Checkout the app deployed on HuggingFace Spaces : (https://huggingface.co/spaces/Mahesh9/sklearn-rag)
+
+
 &nbsp;
 &nbsp;
 &nbsp;
